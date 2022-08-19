@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proza+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+    <!--jQuery hampurilaismenun funktiolle-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img class="resize" src="img/testilogo.png" alt="Logo" width="100"
+                            height="30"></a></li>
+                <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="order.html">Order</a></li>
+                <li class="item"><a href="delivery.html">Delivery</a></li>
+
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="order-main">
+        <header class="order-header">
+            <h2>Here you can order your pizza</h2>
+            <br>
+            <p>First step: Choose size </p>
+            <p>Second step: Choose toppings</p>
+            <p>Final step: Click order, when you are ready. If you want multiple pizzas, just choose size for your next
+                pizza and then toppings.
+        </header>
+        <section class="container sizes">
+            <h2 class="section-header">Choose size:</h2>
+            <div class="size">
+                <figure><img class="item-image" src="img/pizzanormaali.png" alt="normalsize"></figure>
+                <p class="item-title size-title">Normal pizza base with tomato sauce and cheese</p>
+                <p class="item-price">7 €</p>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+            <div class="size">
+                <figure><img class="item-image" src="img/pizzabig.png" alt="bigsize"></figure>
+                <p class="item-title size-title">Big pizza base with tomato sauce and cheese</p>
+                <p class="item-price">12 €</p>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+        </section>
+
+        <section class="container fillings">
+            <h2 class="section-header">Choose toppings:</h2>
+            <div class="filling">
+                <figure><img class="item-image" src="img/blue_cheese.png" alt="blue-cheese"></figure>
+                <p class="item-title">Blue cheese</p>
+                <p class="item-price">0.5 €</p>
+                <button class="popup button" id="bluecheese">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+                <aside class="form-container popuptext">
+                    <ul class="nutritions"></ul>
+                    <button type="button" class="button cancel">Cancel</button>
+                </aside>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/chicken.png" alt="chicken"></figure>
+                <p class="item-title">Chicken</p>
+                <p class="item-price">1 €</p>
+                <button class="popup button" id="chicken">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/ham.png" alt="ham"></figure>
+                <p class="item-title">Ham</p>
+                <p class="item-price">1 €</p>
+                <button class="popup button" id="ham">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/meat.png" alt="meat"></figure>
+                <p class="item-title">Meat (beef)</p>
+                <p class="item-price">2 €</p>
+                <button class="popup button" id="meat">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/mushroom.png" alt="mushroom"></figure>
+                <p class="item-title">Mushroom</p>
+                <p class="item-price">0.5 €</p>
+                <button class="popup button" id="mushroom">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/pineapple.png" alt="pineapple"></figure>
+                <p class="item-title">Pineapple</p>
+                <p class="item-price">0.5 €</p>
+                <button class="popup button" id="pineapple">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/salami.png" alt="salami"></figure>
+                <p class="item-title">Salami</p>
+                <p class="item-price">1 €</p>
+                <button class="popup button" id="salami">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/shrimp.png" alt="shrimp"></figure>
+                <p class="item-title">Shrimp</p>
+                <p class="item-price">1 €</p>
+                <button class="popup button" id="shrimp">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/tomato.png" alt="tomato"></figure>
+                <p class="item-title">Tomato</p>
+                <p class="item-price">0.5 €</p>
+                <button class="popup button" id="tomato">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+
+            <div class="filling">
+                <figure><img class="item-image" src="img/tuna.png" alt="tuna"></figure>
+                <p class="item-title">Tuna</p>
+                <p class="item-price">1 €</p>
+                <button class="popup button" id="tuna">Nutrition info</button>
+                <button class="choose-item button" type="button">Choose</button>
+            </div>
+        </section>
+    </main>
+    <div class="order-cart-container">
+        <section class="order-cart container">
+            <h2 class="section-header">Cart:</h2>
+            <div class="cart-row">
+                <p class="cart-item cart-header cart-column">Choice</p>
+                <p class="cart-price cart-header cart-column">Price</p>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <p class="cart-total-title">Total price</p>
+                <p class="cart-total-price">0 €</p>
+                <button class="exchange button" type="button">Euros/Bitcoins</button>
+                <button class="order button" type="button">Order</button>
+            </div>
+        </section>
+    </div>
+    <footer class="sources">
+        <p>Nutritional information provided by <a href="https://spoonacular.com/food-api">Spoonacular API</a>. Bitcoin
+            conversion powered by <a href="https://www.coindesk.com/price/bitcoin">CoinDesk</a>.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/order.js"></script>
+</body>
+
+</html>

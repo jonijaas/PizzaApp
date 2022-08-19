@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", SansSerif;
+    text-align: center;
+
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+main{
+    padding: 75px 10px;
+    background-color: white;
+}
+.home.active{
+    padding-top: 230px;
+}
+h1{
+    font-family: "Proza Libre", SansSerif;
+}
+#map{
+    height: 400px;
+    width: 100%;
+}
+video{
+    width: 100%;
+    height: auto;
+}
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #BF0603;
+}
+.banner-container a{
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    font-size: 125%;
+}
+.banner-container a:hover{
+    background-color: #8D0801;
+    width: 50%;
+}
+.pizza-img{
+    max-width: 25%;
+    height: auto;
+}
+/* NAVBAR ALLA */
+nav{
+    background-color: #BF0603;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+}
+.menu li a {
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px 5px;
+}
+.item a:hover, .cart a:hover, .toggle:hover{
+    background: #8D0801;
+    border-radius: 25px;
+}
+
+/* Mobiili- ja tablet-navbar */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+}
+.logo a{
+    max-width: 100px;
+}
+.toggle{
+    order: 1;
+    padding: 5px 5px;
+}
+.item{
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+/* Alla hampurilais-valikon viivat */
+.bars{
+    background: white;
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 18px;
+    margin: 5px;
+    text-align: start;
+}
+.bars::before,.bars::after{
+    background: white;
+    display: inline-block;
+    position: absolute;
+    content:"";
+    height: 2px;
+    width: 18px;
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+/* responsive a la pizza */
+@media all and (min-width: 700px) {
+    main{
+        padding: 100px 5px 0;
+    }
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .menu li a{
+        padding: 15px 30px;
+    }
+    .resize{
+        width: 200px;
+        height: auto;
+    }
+    .pizza-img{
+        max-width: 100%;
+        height: auto;
+    }
+    .banner-container a{
+        font-size: 200%;
+    }
+    .order-cart-container{
+        padding: 0 17%;
+    }
+
+}
+@media all and (min-width: 1200px) {
+    main{
+        padding: 100px 17% 0;
+    }
+    nav{
+        padding: 0 17%;
+    }
+    .banner-container a{
+        font-size: 300%;
+    }
+    .order-cart-container{
+        right: 0;
+        bottom: 0;
+        max-width: 20%;
+        position: fixed;
+        padding: 0;
+    }
+    #map{
+        height: 500px;
+    }
+
+}
+.order-header, .delivery-header{
+    padding-bottom: 10px;
+}
+
+/* Täyte- ja kokovalintakuvien mutoilu */
+.fillings img{
+    /*border: 1px solid black;*/
+    border-radius: 8px;
+    background-color: white;
+}
+h2{
+    width: 100%;
+}
+/* Täytteiden valinnan muotoilu*/
+.fillings{
+    display:flex;
+    flex-wrap:wrap;
+    padding-bottom: 10px;
+    justify-content: center;
+    background-color: #F4D58D;
+}
+.filling{
+    padding: 30px;
+}
+
+/* Pizzan koon valinta osion muotoilut */
+.sizes{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width: 100%;
+    padding-bottom: 30px;
+    background-color: #708D81;
+    border-style: solid;
+    border-color: #BF0603;
+}
+.size-title{
+    width: 220px;
+    margin-top: 5px;
+}
+.item-title{
+    margin-bottom: 5px;
+}
+.item-price{
+    margin-bottom: 5px;
+}
+/* Ostoskorin mutoilut*/
+.order-cart{
+    display:flex;
+    flex-wrap:wrap;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    background-color: #708D81;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+.order-cart-container{
+    width: 100%;
+}
+.cart-column{
+    width: 50%;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    align-items:center;
+}
+.cart-header{
+    width: 100%;
+    border-bottom: 1px solid black;
+    display:flex;
+}
+.cart-row{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+.cart-items{
+    width: 100%;
+}
+.cart-item{
+    width: 30%;
+}
+.cart-price {
+    width: 30%;
+}
+
+.cart-total {
+    border-top: 1px solid black;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+/* Nutrition info -painikkeesta aukeavan infolaatikon määritys*/
+.popuptext{
+    display:none;
+    position:fixed;
+    width: 400px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -125px;
+    top: 50%;
+    left: 50%;
+    border: 10px solid black;
+    border-radius: 8px;
+    text-align: left;
+}
+.form-container {
+    max-width: 250px;
+    padding: 5px;
+    background-color: #708D81;
+}
+.nutritions{
+    list-style: none;
+}
+.cancel{
+    background-color: #BF0603;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10px;
+}
+/*Footer osion muotoilut */
+.sources{
+    width: 100%;
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/* Painikkeiden muotoilu */
+.choose-item{
+    background-color: #BF0603;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+}
+.popup{
+    background-color: #708D81;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+}
+.remove-item{
+    background-color: #001427;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+}
+.exchange{
+    background-color: #001427;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+.order{
+    background-color: #BF0603;
+    padding: 10px;
+    padding-right: 60px;
+    border-radius: 8px;
+    color: white;
+}
+.button{
+    cursor: pointer;
+}
+
+/* Delivery sivun css määritykset */
+.delivery-main{
+    width: 100%;
+}
+.delivery-main.active{
+    padding-top: 110px;
+}
+
+#results{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*Delivery sivun painikkeet ja syötekenttä */
+#locatebutton{
+    background-color: #708D81;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+}
+#finishorder{
+    background-color: #BF0603;
+    padding: 25px;
+    border-radius: 8px;
+    color: white;
+    font-size: 150%;
+}
+#address{
+    width: 80%;
+    height: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

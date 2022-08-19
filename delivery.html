@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proza+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+
+    <!-- Leaflet CSS ja .js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!--jQuery hampurilaismenun funktiolle-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="index.html"><img class="resize" src="img/testilogo.png" alt="Logo" width="100"
+                            height="30"></a></li>
+                <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="order.html">Order</a></li>
+                <li class="item"><a href="delivery.html">Delivery</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="delivery-main">
+        <header class="delivery-header">
+            <h2>Delivery:</h2> <br>
+            <p>Our maximum delivery distance is 10km.</p>
+            <p>Our place is located at Leppävaara Espoo (marker on map).</p>
+        </header>
+        <div id="map"></div>
+        <section id="search">
+            <form>
+                <input type="text" name="address" value="" id="address" placeholder="Address" />
+                <button type="button" class="button" id="locatebutton">Locate</button>
+            </form>
+            <h2>Details of delivery:</h2><br>
+            <div id="results"></div>
+            <button type="button" class="button" id="finishorder">Finish order!</button>
+        </section>
+    </main>
+
+    <script src="js/Polyline.encoded.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>
