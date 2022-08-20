@@ -10,4 +10,4 @@ Simple website based application for ordering pizza, like imaginary online pizze
 App is using [Spoonacular API](https://spoonacular.com/food-api) for getting nutrition information, [CoinDesk API](https://www.coindesk.com/) for getting exchange currencies and  for maps and routing app is using [Nominatim/OpenStreetMap](https://nominatim.org/release-docs/develop/) and [Digitransit](https://digitransit.fi/en/developers/apis/) APIs.
 
 ## Configuration
-App is working without any particular configuration. For nutrition information from Spoonacular, API key is required.
+Web application is working without any particular configuration. For nutrition information from Spoonacular, API key is required.
